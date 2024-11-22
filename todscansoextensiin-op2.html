@@ -2,6 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+         <script src="https://compo-enteesdewebb.glitch.me/adcash_lib.js"></script>
+    <script type="text/javascript">
+        aclib.runPop({
+            zoneId: '7425742',
+        });
+    </script>
     <title>Verificación de Extensión e Inclusión de Reproductor</title>
     <link rel="stylesheet" href="https://boxicons.com/css/boxicons.min.css">
  <style>
@@ -46,34 +52,71 @@
             display: none;
         }
 
-        .alert-card {
-            background-color: #0000ff;
-            border-radius: 8px;
-            padding: 20px;
-            max-width: 400px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            margin-bottom: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+.alert-card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+}
 
-        .alert-card h2 {
-            margin-top: 0;
-            font-size: 24px;
-        }
+.alert-card h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
 
-        .alert-card .boxicon {
-            font-size: 48px;
-            color: #ff0;
-        }
+.alert-card .boxicon {
+    font-size: 48px;
+    color: #ff0;
+}
 
-        .alert-card p {
-            margin: 10px 0;
-            color: #ebebeb;
-        }
+.alert-card p {
+    margin: 10px 0;
+    color: #ebebeb;
+}
+
+@media (max-width: 480px) {
+    .alert-card {
+        max-width: 90%;
+        padding: 5px;
+        margin-right: 50px;
+    }
+
+    .alert-card h2 {
+        font-size: 20px;
+    }
+
+    .alert-card .boxicon {
+        font-size: 36px;
+    }
+
+    .alert-card p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .alert-card {
+        max-width: 80%;
+        padding: 25px;
+    }
+
+    .alert-card h2 {
+        font-size: 22px;
+    }
+
+    .alert-card .boxicon {
+        font-size: 42px;
+    }
+
+    .alert-card p {
+        font-size: 16px; 
+    }
+}
+
+
 
         a {
             color: #0f0;
@@ -84,15 +127,15 @@
 <body>
     <div class="container">
         <div id="player" class="hidden"></div>
-        <div id="alerta-extension" class="hidden alert-card">
-            <i class='bx bx-error-circle boxicon'></i>
+        <div id="alerta-extension" class="hidden alert">
+        <i class="bx bx-error-circle boxicon"></i>
              <h2>Instalar Extensión VideoPlayer</h2>
             <p>Para ver los canales, necesitas añadir la extensión VideoPlayer.</p>
             <p>Una vez instalada la extensión en tu Navegador, recargar esta página.</p>
             <p>Recuerda:estos canales estan disponibles en Argentina, Paraguay, Uruguay o con VPN de estos Paises.</p>
             <p>Una vez instalada la extensión, recarga la página.</p>
-            <a href="https://chrome.google.com/webstore/detail/opmeopcambhfimffbomjgemehjkbbmji" target="_blank">Instalar ahora</a>
-        </div>
+            <a href="https://chromewebstore.google.com/detail/reproductor-mpdm3u8m3uepg/opmeopcambhfimffbomjgemehjkbbmji" target="_blank">Instalar ahora</a>
+     </div>
     </div>
     <script type="text/javascript">
         function getParameterByName(name) {
@@ -122,39 +165,40 @@ else if (getURL == "Q2FuYWxfNV9Sb3Nhcmlv" || getURL == "VEVMRUZVVFVST19DNA==" ||
 number = 4;
 else
 number = 3;
-        // Función para verificar si es Windows y PC
-        function isWindowsPC() {
-            const userAgent = navigator.userAgent.toLowerCase();
-            return /windows/.test(userAgent) && !/windows phone/.test(userAgent);
-        }
+       
+// Función para verificar si es Windows o Linux
+function isWindowsPC() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    return (/windows|linux/.test(userAgent)) && !(/mobile|tablet|iphone|ipod|android/.test(userAgent));
+}
 
-        // Función para mostrar el mensaje de dispositivo no compatible
-        function showUnsupportedDeviceMessage() {
-            const unsupportedMessage = document.createElement('div');
-            unsupportedMessage.classList.add('alert-card');
-            unsupportedMessage.innerHTML = `
-                <i class='bx bx-error-circle boxicon'></i>
-                <h2>Dispositivo no compatible</h2>
-                <p>Esta Opcion solo es compatible con PC con Windows. Por favor, usa un PC para acceder.</p>
-            `;
-            document.body.appendChild(unsupportedMessage);
-        }
+// Función para mostrar el mensaje de dispositivo no compatible
+function showUnsupportedDeviceMessage() {
+    const unsupportedMessage = document.createElement('div');
+    unsupportedMessage.classList.add('alert-card');
+    unsupportedMessage.innerHTML = `
+        <i class='bx bx-error-circle boxicon'></i>
+       <h2>Dispositivo no compatible</h2>
+     <p>Esta Opcion solo es compatible con PC con Windows. Por favor, usa un PC para acceder.</p>
+    `;
+    document.body.appendChild(unsupportedMessage);
+}
 
         // Verificar si es un dispositivo compatible antes de ejecutar el código principal
         if (!isWindowsPC()) {
             showUnsupportedDeviceMessage();
         } else {
             // Array de URLs disponibles
-            var mt = ["edge-live01-cen","edge-live02-cen","edge-live03-cen","edge-vod01-cen", "edge-live01-mun", "edge-live02-mun", "edge-live01-coe","edge-mix01-bua","edge-mix01-mun", "edge-mix02-mun", "edge-mix01-mus", "edge-mix03-mus", "edge-mix01-coe","edge-mix02-coe", "edge-mix03-coe", "edge-mix04-coe", "edge-mix05-coe","edge-live01-bel", "edge-live02-bel","edge-live03-bel","edge-mix01-cte","edge-mix02-cte", "edge-live11-hr", "edge-live12-hr", "edge-live13-hr", "edge-live14-hr", "edge-live15-hr", "edge-live16-hr", "edge-live17-hr", "edge-live31-hr", "edge-live32-hr", "edge-live34-hr", "edge-live11-sl", "edge-live12-sl", "edge-live13-sl", "edge-live15-sl", "edge-live17-sl", "edge-live31-sl","edge-live32-sl","edge-vod01-sl","edge-vod02-sl", "edge-vod04-sl", "edge-vod06-sl", "edge9-sl", "edge10-sl", "edge-vod01-hr","edge-vod02-hr","edge-vod03-hr", "edge-vod04-hr", "edge1-ccast-sl", "edge2-ccast-sl", "edge6-ccast-sl","edge5-hr","edge-mix01-ird", "edge-mix02-ird"];
+            var mt = ["edge-live01-cen","edge-live02-cen","edge-live03-cen","edge-vod01-cen", "edge-live01-mun", "edge-live02-mun","edge-mix01-bua","edge-live01-coe", "edge-mix01-mun", "edge-mix02-mun", "edge-mix01-mus", "edge-mix03-mus", "edge-mix01-coe","edge-mix02-coe", "edge-mix03-coe", "edge-mix04-coe", "edge-mix05-coe","edge-live01-bel", "edge-live02-bel","edge-live03-bel","edge-mix01-cte","edge-mix02-cte", "edge-live11-hr", "edge-live12-hr", "edge-live13-hr", "edge-live14-hr", "edge-live15-hr", "edge-live16-hr", "edge-live17-hr", "edge-live31-hr", "edge-live32-hr", "edge-live34-hr", "edge-live11-sl", "edge-live12-sl", "edge-live13-sl", "edge-live15-sl", "edge-live17-sl", "edge-live31-sl","edge-live32-sl","edge-vod01-sl","edge-vod02-sl", "edge-vod04-sl", "edge-vod06-sl", "edge9-sl", "edge10-sl", "edge-vod01-hr","edge-vod02-hr","edge-vod03-hr", "edge-vod04-hr", "edge1-ccast-sl", "edge2-ccast-sl", "edge6-ccast-sl","edge5-hr","edge-mix01-ird", "edge-mix02-ird","edge-live01-ros","edge-live02-ros","edge-mix01-bua","cdn","chromecast"];
 
             // Obtener un índice aleatorio de la lista de URLs
             var randomIndex = Math.floor(Math.random() * mt.length);
             console.log("Selected mt:", mt[randomIndex]);
 
             // Construir la URL del mpd
-            var mpdBase = `https://${mt[randomIndex]}.cvattv.com.ar/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc_wl/${atob(getURL)}.mpd`;
+            var mpdBase = `https://${mt[randomIndex]}.cvattv.com.ar/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc_2A_wl/${atob(getURL)}.mpd`;
 
-            // Definir las claves
+  // Definir las claves
             var keyId, key;
 
             // Asignar valores si se cumple la condición
@@ -1000,7 +1044,7 @@ else if (getURL == "U2V4dHJlbWU")
 {
 	keyId = "95bd64227acf458daf7886f803d0298e";
 	key = "79e28ee0ec58958bb666f9e53a0cd434";
-}		
+}
 else if (getURL == "RXZlbnRvczFIRA") // Eventos 1
 {
         keyId = "5c86e237317c2231ac1bc130e995fad6";
@@ -1014,17 +1058,14 @@ else if (getURL == "RXZlbnRvc18yX0hE") // Eventos 2
 }	
 
             // Convertir keyId y key a una cadena JSON
-            if (keyId && key) {
-                var keyObj = {};
-                keyObj[keyId] = key;
-                var keyJson = JSON.stringify(keyObj);
+               if (keyId && key) {
+                var keyString = `"${keyId}":"${key}"`;
                 // Codificar en base64
-                var base64Key = btoa(keyJson);
+                var base64Key = btoa(keyString);
 
                 // Construir la URL con el key ofuscado en base64
-                var extensionUrl = `chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/pages/player.html#${mpdBase}?&ck=${encodeURIComponent(base64Key)}`;
-
-                // Mostrar el reproductor o el mensaje de extensión según corresponda
+               var extensionUrl = `chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/pages/player.html#${mpdBase}?ck=${encodeURIComponent(base64Key)}&headers=eyJvcmlnaW4iOiJodHRwczovL3dlYi5hcHAuZmxvdy5jb20uYXIvIiwicmVmZXJlciI6Imh0dHBzOi93ZWIuYXBwLmZsb3cuY29tLmFyLyJ9`;
+ // Mostrar el reproductor o el mensaje de extensión según corresponda
                 const playerDiv = document.getElementById("player");
                 const alertaDiv = document.getElementById("alerta-extension");
 
@@ -1049,7 +1090,5 @@ else if (getURL == "RXZlbnRvc18yX0hE") // Eventos 2
             img.onerror = notInstalledCallback;
             img.src = 'chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/play-on.png';
         }
-      
-    </script>
-</body>
+    </script></body>
 </html>
