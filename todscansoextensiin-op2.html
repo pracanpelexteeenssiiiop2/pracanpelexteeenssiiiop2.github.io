@@ -17,10 +17,6 @@
   
   
 <style>
-        :root{
-         --nav_pantalla: 80px;
-        }
-
         body {
             background-color: #000;
             color: #fff;
@@ -29,13 +25,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
+            height: 100vh;
             font-family: Arial, sans-serif;
         }
 
         .container {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -43,14 +39,14 @@
         }
 
         #player {
-            /* position: center; */
+            position: relative;
             width: 100%;
-            /* padding-top: 56.25%; */
-            background: #550040;
+            padding-top: 56.25%; /* Aspect ratio 16:9 */
+            background: #000;
         }
 
         #player iframe {
-            position: center;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -62,74 +58,39 @@
             display: none;
         }
 
-.alert-card {
-    background-color: #333;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin: 20px auto;
-}
+        .alert-card {
+            background-color: #0000ff;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-.alert-card h2 {
-    margin-top: 0;
-    font-size: 24px;
-}
+        .alert-card h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
 
-.alert-card .boxicon {
-    font-size: 48px;
-    color: #FFF;
-}
+        .alert-card .boxicon {
+            font-size: 48px;
+            color: #ff0;
+        }
 
-.alert-card p {
-    margin: 10px 0;
-    color: #FFF;
-}
+        .alert-card p {
+            margin: 10px 0;
+            color: #ebebeb;
+        }
 
-@media (max-width: 480px) {
-    .alert-card {
-        max-width: 90%;
-        padding: 5px;
-        /* margin-right: 50px; */
-    }
-
-    .alert-card h2 {
-        font-size: 20px;
-    }
-
-    .alert-card .boxicon {
-        font-size: 36px;
-    }
-
-    .alert-card p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 768px) {
-    .alert-card {
-        max-width: 80%;
-        padding: 25px;
-    }
-
-    .alert-card h2 {
-        font-size: 22px;
-    }
-
-    .alert-card .boxicon {
-        font-size: 42px;
-    }
-
-    .alert-card p {
-        font-size: 16px; 
-    }
-}
-
-a {
-    color: #0f0 !important;
-    text-decoration: underline;
-}
+        a {
+            color: #0f0;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
