@@ -9,13 +9,10 @@
     </script>
     <title>Verificación de Extensión e Inclusión de Reproductor</title>
   
-
-    <link rel="stylesheet" href="https://boxicons.com/css/boxicons.min.css">
   
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://pramennudeewebseitee.github.io/bootstrap.min-extensioness.css">
-  
-  
+    <link rel="stylesheet" href="https://boxicons.com/css/boxicons.min.css">
+
 <style>
         body {
             background-color: #000;
@@ -25,13 +22,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
+            height: 100vh;
             font-family: Arial, sans-serif;
         }
 
         .container {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -39,14 +36,14 @@
         }
 
         #player {
-            position: center;
+            position: relative;
             width: 100%;
             padding-top: 56.25%; /* Aspect ratio 16:9 */
             background: #000;
         }
 
         #player iframe {
-            position: center;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -58,34 +55,71 @@
             display: none;
         }
 
-        .alert-card {
-            background-color: #0000ff;
-            border-radius: 8px;
-            padding: 20px;
-            max-width: 400px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            margin-bottom: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+.alert-card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+}
 
-        .alert-card h2 {
-            margin-top: 0;
-            font-size: 24px;
-        }
+.alert-card h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
 
-        .alert-card .boxicon {
-            font-size: 48px;
-            color: #ff0;
-        }
+.alert-card .boxicon {
+    font-size: 48px;
+    color: #ff0;
+}
 
-        .alert-card p {
-            margin: 10px 0;
-            color: #ebebeb;
-        }
+.alert-card p {
+    margin: 10px 0;
+    color: #ebebeb;
+}
+
+@media (max-width: 480px) {
+    .alert-card {
+        max-width: 90%;
+        padding: 5px;
+        margin-right: 50px;
+    }
+
+    .alert-card h2 {
+        font-size: 20px;
+    }
+
+    .alert-card .boxicon {
+        font-size: 36px;
+    }
+
+    .alert-card p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .alert-card {
+        max-width: 80%;
+        padding: 25px;
+    }
+
+    .alert-card h2 {
+        font-size: 22px;
+    }
+
+    .alert-card .boxicon {
+        font-size: 42px;
+    }
+
+    .alert-card p {
+        font-size: 16px; 
+    }
+}
+
+
 
         a {
             color: #0f0;
@@ -149,7 +183,8 @@ function showUnsupportedDeviceMessage() {
     unsupportedMessage.innerHTML = `
         <i class='bx bx-error-circle boxicon'></i>
        <h2>Dispositivo no compatible</h2>
-     <p>Esta Opcion solo es compatible con PC con Windows. Por favor, usa un PC para acceder.</p>
+     <p>Esta Opción es solo para Computadoras/Notebook con Windows use una</p>
+      <p> Computadoras/Notebook para Acceder.</p>
     `;
     document.body.appendChild(unsupportedMessage);
 }
