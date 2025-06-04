@@ -8,10 +8,8 @@
         });
     </script>
     <title>Verificación de Extensión e Inclusión de Reproductor</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://boxicons.com/css/boxicons.min.css">
-
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+<link rel="stylesheet" href="https://boxicons.com/css/boxicons.min.css">
 <style>
         body {
             background-color: #000;
@@ -141,24 +139,20 @@
      </div>
     </div>
     <script type="text/javascript">
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
 
+        var getURL = getParameterByName('get');
+        var getIMG = getParameterByName('img');
+        var getKEY = getParameterByName('key');
+        var getKEY2 = getParameterByName('key2');
+        if (getURL == "") {alert(' ');}
 
-                function getParameterByName(name) {
-                        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-                        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-                                results = regex.exec(location.search);
-                        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-                }
-
-                var getURL = getParameterByName('get');
-                var getIMG = getParameterByName('img');
-                var getKEY = getParameterByName('key');
-                var getKEY2 = getParameterByName('key2');
-
-
-                if (getURL == "") { alert(' '); }
-
-                var number;
+        var number;
 
                 if (getURL == "QTNfQ2luZQ==" || getURL == "Q0FOQUxfTFVa" || getURL == "QWxsZWdyb0hE" || getURL == "QmFieVRW" || getURL == "RE5ld3M=" || getURL == "VVNBX05ldHdvcms=" || getURL == "QTNfU2VyaWVz" || getURL == "TWVnYV9UVg==" || getURL == "QW1lcmljYV9UdWN1bWFu" || getURL == "UFhfU3BvcnRz" || getURL == "Q2gxMF9UdWN1bWFu" || getURL == "SG9tZV9hbmRfR2FyZGVu" || getURL == "REhF" || getURL == "Rmxvd19NdXNpY19YUA==" || getURL == "QUVIRA==" || getURL == "SG9sYV9UVg==" || getURL == "QVhOSEQ=" || getURL == "TVRWMDA=" || getURL == "V2FybmVySEQ=" || getURL == "R0VOX1RW" || getURL == "Rm94X1Nwb3J0c19QcmVtaXVuX0hE" || getURL == "VG9kb05vdGljaWFz" || getURL == "VHlDU3BvcnQ" || getURL == "QW1lcmljYTI0" || getURL == "QzVO" || getURL == "TGFfTmFjaW9u" || getURL == "Q3JvbmljYVRW" || getURL == "Q2FuYWxfOF9UdWN1bWFu" || getURL == "UGFyYWd1YXlfVFY=" || getURL == "UGFyYW1vdW50" || getURL == "Q29tZWR5Q2VudHJhbA" || getURL == "Rmxvd19NdXNpY19YUA==" || getURL == "Rmxvd19NdXNpY18x" || getURL == "Rmxvd19NdXNpY18y" || getURL == "Rmxvd19NdXNpY18z" || getURL == "Qm9vbWVyYW5n" || getURL == "RHJlYW13b3Jrcw==" || getURL == "QW5pbWFsUGxhbmV0" || getURL == "SGlzdG9yeUhE" || getURL == "SUQ=" || getURL == "QnJhdm9UVg==" || getURL == "U29ueUhE" || getURL == "U29ueV9Nb3ZpZXM=" || getURL == "VHJ1VFY=" || getURL == "SEJPX1BPUA==" || getURL == "RGlzY292ZXJ5VHVyYm8=" || getURL == "RGlzbmV5SnI=" || getURL == "SW52ZXN0aWdhY2lvbl9QZXJpb2Rpc3RpY2E=" || getURL == "Rm94U3BvcnRzMl9VWQ==" || getURL == "RVNQTjQ=" || getURL == "Rm94U3BvcnRzM19VWQ==" || getURL == "RXZlbnRvc19IRF9VeQ==" || getURL == "VGVsZW11bmRvX0hE" || getURL == "UGFzaW9uZXM=")
                         number = 7;
@@ -172,8 +166,8 @@
                         number = 4;
                 else
                         number = 3;
-
-             // Función para verificar si es Windows o Linux
+       
+// Función para verificar si es Windows o Linux
 function isWindowsPC() {
     const userAgent = navigator.userAgent.toLowerCase();
     return (/windows|linux/.test(userAgent)) && !(/mobile|tablet|iphone|ipod|android/.test(userAgent));
@@ -196,38 +190,38 @@ function showUnsupportedDeviceMessage() {
         if (!isWindowsPC()) {
             showUnsupportedDeviceMessage();
         } else {
-                        // Array de URLs disponibles
-                        var mt = ["chromecast", "cdn"];
- // var mt = ["edge-live01-cen","edge-live02-cen","edge-live03-cen","edge-vod01-cen", 
-//	"edge-live01-mun", "edge-live02-mun","edge-mix01-bua","edge-live01-coe", 
- //     "edge-mix01-mun", "edge-mix02-mun", "edge-mix01-mus", "edge-mix03-mus", 
-//	"edge-mix01-coe","edge-mix02-coe", "edge-mix03-coe", "edge-mix04-coe", 
- //     "edge-mix05-coe","edge-live01-bel", "edge-live02-bel","edge-live03-bel",
-//	"edge-mix01-cte","edge-mix02-cte", "edge-live11-hr", "edge-live12-hr", 
-//	"edge-live13-hr", "edge-live14-hr", "edge-live15-hr", "edge-live16-hr", 
-//	"edge-live17-hr", "edge-live31-hr", "edge-live32-hr", "edge-live34-hr", 
-//	"edge-live11-sl", "edge-live12-sl", "edge-live13-sl", "edge-live15-sl", 
-//	"edge-live17-sl", "edge-live31-sl","edge-live32-sl","edge-vod01-sl",
-//	"edge-vod02-sl", "edge-vod04-sl", "edge-vod06-sl", "edge9-sl", "edge10-sl", 
-//	"edge-vod01-hr","edge-vod02-hr","edge-vod03-hr", "edge-vod04-hr", "edge1-ccast-sl", 
-//	"edge2-ccast-sl", "edge6-ccast-sl","edge5-hr","edge-mix01-ird", 
-//	"edge-mix02-ird","edge-live01-ros","edge-live02-ros","edge-mix01-bua",
-//	 "cdn","chromecast"];
-
-                     // Obtener un índice aleatorio de la lista de URLs
+            // Array de URLs disponibles
+// var mt = ["edge-live01-cen","edge-live02-cen","edge-live03-cen","edge-vod01-cen", 
+//"edge-live01-mun", "edge-live02-mun","edge-mix01-mun", "edge-mix02-mun", 
+//"edge-mix01-cte", "edge-mix02-cte", "edge-live01-cte","edge-live02-cte",
+//"edge-live01-bel","edge-live02-bel","edge-live03-bel",
+//"edge-mix01-coe","edge-mix02-coe","edge-mix03-coe","edge-mix04-coe","edge-mix05-coe",
+//"edge1-ccast-sl","edge2-ccast-sl","edge6-ccast-sl", "edge7-ccast-sl",
+//"edge-mix01-mus","edge-mix02-mus", "edge-mix03-mus","edge-live11-hr", "edge-live12-hr",
+//"edge-live13-hr", "edge-live14-hr", "edge-live15-hr", "edge-live16-hr", 
+//"edge-live17-hr", "edge-live31-hr", "edge-live32-hr", "edge-live34-hr", 
+//"edge-live11-sl", "edge-live12-sl", "edge-live13-sl", "edge-live15-sl", 
+//"edge-live17-sl", "edge-live31-sl","edge-live32-sl","edge-vod01-sl",
+//"edge-vod01-hr","edge-vod02-hr","edge-vod03-hr","edge-vod04-hr",
+//"edge-vod01-sl","edge-vod02-sl", "edge-vod04-sl", "edge-vod06-sl", 
+//"edge9-sl", "edge10-sl","edge-mix01-bua","edge-mix01-neh",
+//"edge5-hr","edge6-hr","edge-mix01-ird", "edge-mix02-ird",
+//"edge-live01-coe" ,"edge-live01-ros","edge-live02-ros","edge-mix01-res",
+//"cdn","chromecast"];
+var mt = [  "cdn","chromecast"];
+		
+            // Obtener un índice aleatorio de la lista de URLs
             var randomIndex = Math.floor(Math.random() * mt.length);
             console.log("Selected mt:", mt[randomIndex]);
 
             // Construir la URL del mpd
             var mpdBase = `https://${mt[randomIndex]}.cvattv.com.ar/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc_wl/${atob(getURL)}.mpd`;
 
-            // Definir las claves
+  // Definir las claves
             var keyId, key;
 
-                     
-
-                        // Asignar valores si se cumple la condición
-                        if (getURL == "RVNQTjJIRA") //ESPN
+            // Asignar valores si se cumple la condición
+            if (getURL == "RVNQTjJIRA") //ESPN
                         {
                                 keyId = "e884b711ab111beb8a7ba1e7bcbdc9bf";
                                 key = "cb89ee3961599e3e648a5aad60895f34";
@@ -1295,8 +1289,7 @@ function showUnsupportedDeviceMessage() {
                                 keyId = "e54e9ea87a634658fbba0e380aa701a7";
                                 key = "4e486d25d7d0e7d131743b285963c643";
                         }
-
-                // Convertir keyId y key a una cadena JSON
+            // Convertir keyId y key a una cadena JSON
                if (keyId && key) {
                 var keyString = `"${keyId}":"${key}"`;
                 // Codificar en base64
