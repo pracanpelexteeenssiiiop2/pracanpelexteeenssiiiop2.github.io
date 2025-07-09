@@ -265,6 +265,7 @@
 
         });
 
+  
         // Array de URLs disponibles
         var mt = ["chromecast", "cdn"];
 
@@ -301,13 +302,13 @@
 
 
         // Construir la URL del mpd
-var mpdBase = `https://${mt[randomIndex]}.cvattv.com.ar/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc_wl/${atob(getURL)}.mpd`;
-  // let mpdBase = `https://edge-live15-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzUxODkzMTg1Iiwic2lwIjoiNDUuMjI4LjY3LjMwIiwicGF0aCI6Ii9saXZlL2M2ZWRzL1RlbGVmZUhEL1NBX0xpdmVfZGFzaF9lbmMvIiwic2Vzc2lvbl9jZG5faWQiOiIzMjIwMTljOTZmMjY1ZDU1Iiwic2Vzc2lvbl9pZCI6IiIsImNsaWVudF9pZCI6IiIsImRldmljZV9pZCI6IiIsIm1heF9zZXNzaW9ucyI6MCwic2Vzc2lvbl9kdXJhdGlvbiI6MCwidXJsIjoiaHR0cHM6Ly8yMDEuMjM1LjY2LjEyMyIsImF1ZCI6IjU4Iiwic291cmNlcyI6Wzg1LDE0NCw4Niw4OF19.foAon6rbwrDXG376bRhwU5tGlQ4pnwjxZg-wC5HJpYNNQPXO6GIcve76q4mlNITIRZlpPlFhUXCrXErCReVcqA==/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc_wl/${atob(getURL)}.mpd`;
+        var mpdBase = `https://${mt[randomIndex]}.cvattv.com.ar/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc/${atob(getURL)}.mpd`;
+        // let mpdBase = `https://edge-live15-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzUxODkzMTg1Iiwic2lwIjoiNDUuMjI4LjY3LjMwIiwicGF0aCI6Ii9saXZlL2M2ZWRzL1RlbGVmZUhEL1NBX0xpdmVfZGFzaF9lbmMvIiwic2Vzc2lvbl9jZG5faWQiOiIzMjIwMTljOTZmMjY1ZDU1Iiwic2Vzc2lvbl9pZCI6IiIsImNsaWVudF9pZCI6IiIsImRldmljZV9pZCI6IiIsIm1heF9zZXNzaW9ucyI6MCwic2Vzc2lvbl9kdXJhdGlvbiI6MCwidXJsIjoiaHR0cHM6Ly8yMDEuMjM1LjY2LjEyMyIsImF1ZCI6IjU4Iiwic291cmNlcyI6Wzg1LDE0NCw4Niw4OF19.foAon6rbwrDXG376bRhwU5tGlQ4pnwjxZg-wC5HJpYNNQPXO6GIcve76q4mlNITIRZlpPlFhUXCrXErCReVcqA==/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc/${atob(getURL)}.mpd`;
 
         // Construir la URL del mpd por proxy por respaldo
         let getHeaderMPD = "";
 
-        if (false) {
+        if (true) {
             // (async () => {
             //     const datos = await obtenerDatos();
 
@@ -320,7 +321,7 @@ var mpdBase = `https://${mt[randomIndex]}.cvattv.com.ar/live/c${number}eds/${ato
             //     getHeaderMPD = datos.headers;
             // })();
 
-            mpdBase = `https://edge-live15-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzUxODkzMTg1Iiwic2lwIjoiNDUuMjI4LjY3LjMwIiwicGF0aCI6Ii9saXZlL2M2ZWRzL1RlbGVmZUhEL1NBX0xpdmVfZGFzaF9lbmMvIiwic2Vzc2lvbl9jZG5faWQiOiIzMjIwMTljOTZmMjY1ZDU1Iiwic2Vzc2lvbl9pZCI6IiIsImNsaWVudF9pZCI6IiIsImRldmljZV9pZCI6IiIsIm1heF9zZXNzaW9ucyI6MCwic2Vzc2lvbl9kdXJhdGlvbiI6MCwidXJsIjoiaHR0cHM6Ly8yMDEuMjM1LjY2LjEyMyIsImF1ZCI6IjU4Iiwic291cmNlcyI6Wzg1LDE0NCw4Niw4OF19.foAon6rbwrDXG376bRhwU5tGlQ4pnwjxZg-wC5HJpYNNQPXO6GIcve76q4mlNITIRZlpPlFhUXCrXErCReVcqA==/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc_wl/${atob(getURL)}.mpd`;
+            mpdBase = `https://edge7-ccast-sl.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzUyMTU5MTY1Iiwic2lwIjoiNDUuMjI4LjY3LjMwIiwicGF0aCI6Ii9saXZlL2M2ZWRzL1RlbGVmZUhEL1NBX0xpdmVfZGFzaF9lbmMvIiwic2Vzc2lvbl9jZG5faWQiOiI0YjRmZThmNjEzYmMxODU0Iiwic2Vzc2lvbl9pZCI6IiIsImNsaWVudF9pZCI6IiIsImRldmljZV9pZCI6IiIsIm1heF9zZXNzaW9ucyI6MCwic2Vzc2lvbl9kdXJhdGlvbiI6MCwidXJsIjoiaHR0cHM6Ly8xODEuMTIuMzYuMTUwIiwiYXVkIjoiMjI0Iiwic291cmNlcyI6Wzg1LDE0NCw4Niw4OF19.DLzVMsZst6miZu6fDmnwPUsyiqypcitH_4nf3qqggY68YmFZnqjb0oyieGTVzGdOQEeB-WYK0CFpIsRQMLPE7g==/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc_wl/${atob(getURL)}.mpd`;
             getHeaderMPD = "eyJvcmlnaW4iOiJodHRwczovL3BvcnRhbC5hcHAuZmxvdy5jb20uYXIvIiwicmVmZXJlciI6Imh0dHBzOi9wb3J0YWwuYXBwLmZsb3cuY29tLmFyLyJ9";
         }
 
@@ -1465,4 +1466,5 @@ var mpdBase = `https://${mt[randomIndex]}.cvattv.com.ar/live/c${number}eds/${ato
         }
     </script>
 </body>
+
 </html>
