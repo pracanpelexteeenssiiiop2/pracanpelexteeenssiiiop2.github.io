@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="referrer" content="no-referrer">
-    <title>-</title>
-    <!-- Favicon -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+ <meta charset="UTF-8">
+<meta name="referrer" content="no-referrer">
+<title>esssteeen</title>
+   <script type="text/javascript">
+            aclib.runPop({
+                zoneId: '7425742',
+            });
+        </script>
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 <link rel="stylesheet" href="https://boxicons.com/css/boxicons.min.css">
+    <style>
+        :root {
+            --nav_pantalla: 80px;
+        }
 
-<style>
         body {
-            background-color: #000;
+            background-color: #05081c;
             color: #fff;
             margin: 0;
             padding: 0;
@@ -32,9 +38,9 @@
         }
 
         #player {
-            position: relative;
+            /* position: relative; */
             width: 100%;
-            padding-top: 56.25%; /* Aspect ratio 16:9 */
+            /* padding-top: 56.25%; */
             background: #000;
         }
 
@@ -42,8 +48,8 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             border: none;
         }
 
@@ -51,81 +57,85 @@
             display: none;
         }
 
-.alert-card {
-    background-color: #333;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin: 20px auto;
-}
+        .alert-card {
+            background-color: #333;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+        }
 
-.alert-card h2 {
-    margin-top: 0;
-    font-size: 24px;
-}
+        .alert-card h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
 
-.alert-card .boxicon {
-    font-size: 48px;
-    color: #ff0;
-}
+        .alert-card .boxicon {
+            font-size: 48px;
+            color: #ff0;
+        }
 
-.alert-card p {
-    margin: 10px 0;
-    color: #ebebeb;
-}
+        .alert-card p {
+            margin: 10px 0;
+            color: #ebebeb;
+        }
 
-@media (max-width: 480px) {
-    .alert-card {
-        max-width: 90%;
-        padding: 5px;
-        margin-right: 50px;
-    }
+        @media (max-width: 480px) {
+            .alert-card {
+                max-width: 90%;
+                padding: 5px;
+                /* margin-right: 50px; */
+            }
 
-    .alert-card h2 {
-        font-size: 20px;
-    }
+            .alert-card h2 {
+                font-size: 20px;
+            }
 
-    .alert-card .boxicon {
-        font-size: 36px;
-    }
+            .alert-card .boxicon {
+                font-size: 36px;
+            }
 
-    .alert-card p {
-        font-size: 14px;
-    }
-}
+            .alert-card p {
+                font-size: 14px;
+            }
+        }
 
-@media (min-width: 481px) and (max-width: 768px) {
-    .alert-card {
-        max-width: 80%;
-        padding: 25px;
-    }
+        @media (max-width: 768px) {
+            .alert-card {
+                max-width: 80%;
+                padding: 25px;
+            }
 
-    .alert-card h2 {
-        font-size: 22px;
-    }
+            .alert-card h2 {
+                font-size: 22px;
+            }
 
-    .alert-card .boxicon {
-        font-size: 42px;
-    }
+            .alert-card .boxicon {
+                font-size: 42px;
+            }
 
-    .alert-card p {
-        font-size: 16px; 
-    }
-}
- a {
-                        color: #ff0 !important;
-                        text-decoration: underline;
-                }
+            .alert-card p {
+                font-size: 16px;
+            }
+        }
 
+        a {
+            color: #0f0 !important;
+            text-decoration: underline;
+        }
 
+        .jw-featured,
+        .jw-rightclick {
+            display: none !important;
+        }
     </style>
 </head>
 
 <body>
- <div class="container">
-                <div id="player" class="hidden"></div>
+    <div class="container">
+        <div id="player" class="hidden"></div>
                 <div id="alerta-extension" class="hidden alert-card text-center bg-dark bg-gradient">
                 <i class="bx bx-error-circle boxicon"></i>
              <h2>Instalar Extensión VideoPlayer</h2>
@@ -139,7 +149,6 @@
      target="_blank">Instalar ahora</a>
      </div>
     </div>
-
     <script type="text/javascript">
 
 
@@ -161,13 +170,13 @@
 
         var number;
 
-        if (getURL == "QTNfQ2luZQ==" || getURL == "VW5pdmVyc28=" || getURL == "Q2FuYWxfMTFfUGFyYW5h" || getURL == "Q0FOQUxfTFVa" || getURL == "QWxsZWdyb0hE" || getURL == "QmFieVRW" || getURL == "RE5ld3M=" || getURL == "VVNBX05ldHdvcms=" || getURL == "QTNfU2VyaWVz" || getURL == "TWVnYV9UVg==" || getURL == "QW1lcmljYV9UdWN1bWFu" || getURL == "UFhfU3BvcnRz" || getURL == "Q2gxMF9UdWN1bWFu" || getURL == "SG9tZV9hbmRfR2FyZGVu" || getURL == "REhF" || getURL == "Rmxvd19NdXNpY19YUA==" || getURL == "QUVIRA==" || getURL == "SG9sYV9UVg==" || getURL == "QVhOSEQ=" || getURL == "TVRWMDA=" || getURL == "V2FybmVySEQ=" || getURL == "R0VOX1RW" || getURL == "Rm94X1Nwb3J0c19QcmVtaXVuX0hE" || getURL == "VG9kb05vdGljaWFz" || getURL == "VHlDU3BvcnQ" || getURL == "QW1lcmljYTI0" || getURL == "QzVO" || getURL == "TGFfTmFjaW9u" || getURL == "Q3JvbmljYVRW" || getURL == "Q2FuYWxfOF9UdWN1bWFu" || getURL == "UGFyYWd1YXlfVFY=" || getURL == "UGFyYW1vdW50" || getURL == "Q29tZWR5Q2VudHJhbA" || getURL == "Rmxvd19NdXNpY19YUA==" || getURL == "Rmxvd19NdXNpY18x" || getURL == "Rmxvd19NdXNpY18y" || getURL == "Rmxvd19NdXNpY18z" || getURL == "Qm9vbWVyYW5n" || getURL == "RHJlYW13b3Jrcw==" || getURL == "QW5pbWFsUGxhbmV0" || getURL == "SGlzdG9yeUhE" || getURL == "SUQ=" || getURL == "QnJhdm9UVg==" || getURL == "U29ueUhE" || getURL == "U29ueV9Nb3ZpZXM=" || getURL == "VHJ1VFY=" || getURL == "SEJPX1BPUA==" || getURL == "RGlzY292ZXJ5VHVyYm8=" || getURL == "RGlzbmV5SnI=" || getURL == "SW52ZXN0aWdhY2lvbl9QZXJpb2Rpc3RpY2E=" || getURL == "Rm94U3BvcnRzMl9VWQ==" || getURL == "RVNQTjQ=" || getURL == "Rm94U3BvcnRzM19VWQ==" || getURL == "RXZlbnRvc19IRF9VeQ==" || getURL == "VGVsZW11bmRvX0hE" || getURL == "UGFzaW9uZXM=")
+        if (getURL == "QTNfQ2luZQ==" || getURL == "Q2FuYWxfUFJP" || getURL == "VW5pdmVyc28=" || getURL == "Q2FuYWxfMTFfUGFyYW5h" || getURL == "Q0FOQUxfTFVa" || getURL == "QWxsZWdyb0hE" || getURL == "QmFieVRW" || getURL == "RE5ld3M=" || getURL == "VVNBX05ldHdvcms=" || getURL == "QTNfU2VyaWVz" || getURL == "TWVnYV9UVg==" || getURL == "QW1lcmljYV9UdWN1bWFu" || getURL == "UFhfU3BvcnRz" || getURL == "Q2gxMF9UdWN1bWFu" || getURL == "SG9tZV9hbmRfR2FyZGVu" || getURL == "REhF" || getURL == "Rmxvd19NdXNpY19YUA==" || getURL == "QUVIRA==" || getURL == "SG9sYV9UVg==" || getURL == "QVhOSEQ=" || getURL == "TVRWMDA=" || getURL == "V2FybmVySEQ=" || getURL == "R0VOX1RW" || getURL == "Rm94X1Nwb3J0c19QcmVtaXVuX0hE" || getURL == "VG9kb05vdGljaWFz" || getURL == "VHlDU3BvcnQ" || getURL == "QW1lcmljYTI0" || getURL == "QzVO" || getURL == "TGFfTmFjaW9u" || getURL == "Q3JvbmljYVRW" || getURL == "Q2FuYWxfOF9UdWN1bWFu" || getURL == "UGFyYWd1YXlfVFY=" || getURL == "UGFyYW1vdW50" || getURL == "Q29tZWR5Q2VudHJhbA" || getURL == "Rmxvd19NdXNpY19YUA==" || getURL == "Rmxvd19NdXNpY18x" || getURL == "Rmxvd19NdXNpY18y" || getURL == "Rmxvd19NdXNpY18z" || getURL == "Qm9vbWVyYW5n" || getURL == "RHJlYW13b3Jrcw==" || getURL == "QW5pbWFsUGxhbmV0" || getURL == "SGlzdG9yeUhE" || getURL == "SUQ=" || getURL == "QnJhdm9UVg==" || getURL == "U29ueUhE" || getURL == "U29ueV9Nb3ZpZXM=" || getURL == "VHJ1VFY=" || getURL == "SEJPX1BPUA==" || getURL == "RGlzY292ZXJ5VHVyYm8=" || getURL == "RGlzbmV5SnI=" || getURL == "SW52ZXN0aWdhY2lvbl9QZXJpb2Rpc3RpY2E=" || getURL == "Rm94U3BvcnRzMl9VWQ==" || getURL == "RVNQTjQ=" || getURL == "Rm94U3BvcnRzM19VWQ==" || getURL == "RXZlbnRvc19IRF9VeQ==" || getURL == "VGVsZW11bmRvX0hE" || getURL == "UGFzaW9uZXM=")
             number = 7;
         else if (getURL == "RVNQTjJfQXJn" || getURL == "Q2FuYWxfMjE=" || getURL == "VGVsZW5vdmVsYXM=" || getURL == "RVdUTg==" || getURL == "S1pP" || getURL == "Vm9ydGVyaXg=" || getURL == "RFc=" || getURL == "Q05OX0ludGVybmFjaW9uYWw=" || getURL == "S2lkb28=" || getURL == "VG9vbmNhc3Q=" || getURL == "UGxpbV9QbGlt" || getURL == "RnJhbmNlXzI0" || getURL == "Tmlja211c2lj" || getURL == "U29tb3NfTGFfUGxhdGE=" || getURL == "QXJ0ZWFyX0ludGVybmFjaW9uYWw=" || getURL == "R29sZGVu" || getURL == "Q2FuYWxfOV9QYXJhbmE=" || getURL == "Q2FuYWxfUnVyYWw=" || getURL == "R29sZl9DaGFubmVs" || getURL == "Q2FuYWxfYQ==" || getURL == "QW1lcmljYV9TcG9ydHM=" || getURL == "Q2luZW1heA==" || getURL == "RXZlbnRvc18yX0hE" || getURL == "Q2FuYWxfOF9DQkE" || getURL == "MjZfVFZfSEQ" || getURL == "RGlwdXRhZG9zX1RW" || getURL == "QXJnZW50aW5pc2ltYQ" || getURL == "TWV0cm8" || getURL == "QkJDX1dvcmxkX05ld3M" || getURL == "VGhlYXRlcl9IRA==" || getURL == "R2xpdHo=" || getURL == "UXVpZXJvX0hE" || getURL == "RGlzY292ZXJ5X1dvcmxkX0hE" || getURL == "RXVyb2NoYW5uZWw=" || getURL == "RGlzY292ZXJ5X1NjaWVuY2U=" || getURL == "SU5DQUFfVHY=" || getURL == "VFY1X01vbmRl" || getURL == "TVRWX0hpdHM=" || getURL == "TVRWX0hE" || getURL == "Tmlja19Kcg==" || getURL == "VFZfRXNwYW5h" || getURL == "V09CSQ==" || getURL == "Vm9sdmVy" || getURL == "VGVsZXN1cg==" || getURL == "TGlmZXRpbWU=" || getURL == "QW50ZW5hXzM=" || getURL == "Rm94X05ld3M=" || getURL == "VHZfQ2hpbGU=" || getURL == "TWFzX0NoaWM=" || getURL == "U3R1ZGlvX1VuaXZlcnNhbA==" || getURL == "SVNBVA==" || getURL == "U3VuX0NoYW5uZWw=" || getURL == "UkFJ" || getURL == "VmVudXM=" || getURL == "U2V4dHJlbWU" || getURL == "UGxheWJveQ" || getURL == "VE5UX1Nwb3J0c19IRA" || getURL == "VGVsZWZlSEQ=" || getURL == "Q2FuYWw3" || getURL == "RW5jdWVudHJv" || getURL == "VGVsZW1heA" || getURL == "TmV0X1RW" || getURL == "Q2FuYWxfMTJfQ0JB" || getURL == "RWxfR2FyYWdl" || getURL == "RmlsbV9BcnRz" || getURL == "VW5pdmVyc2FsX0NoYW5uZWxfSEQ=" || getURL == "RXVyb3BhX0V1cm9wYQ" || getURL == "RXVyb25ld3M=" || getURL == "Rm9vZF9OZXR3b3Jr" || getURL == "RV9FbnRlcnRhaW5tZW50X1RlbGV2aXNpb24=" || getURL == "Q00=" || getURL == "UEFLQV9QQUtB" || getURL == "SGlzdG9yeV8y" || getURL == "U3lGeQ==" || getURL == "VEJT" || getURL == "VENN" || getURL == "SEJPXzI=" || getURL == "SEJPX1BsdXM=" || getURL == "SEJPX0ZhbWlseQ==" || getURL == "SEJPX0V4dHJlbWU=" || getURL == "SEJPX011bmRp" || getURL == "SEJPX1NpZ25hdHVyZQ==" || getURL == "Q2FuYWxfUnVyYWw=" || getURL == "VExD" || getURL == "Q2FuYWxfZGVfbGFfY2l1ZGFk" || getURL == "RGlzY292ZXJ5X0tpZHM=" || getURL == "SFRW" || getURL == "TkJBX1RW" || getURL == "VW5pdmVyc2FsX0NpbmVtYQ==" || getURL == "VW5pdmVyc2FsX0NvbWVkeQ==" || getURL == "dW5pdmVyc2FsX0NyaW1l" || getURL == "VW5pdmVyc2FsX1ByZW1pZXJl" || getURL == "VW5pdmVyc2FsX1JlYWxpdHk=" || getURL == "Q05OX2VuX0VzcGFub2w=" || getURL == "Q2FuYWxfZGVfbGFzX2VzdHJlbGxhcw==")
             number = 6;
         else if (getURL == "QzlOX0M0" || getURL == "Q2FuYWxfQw==" || getURL == "U29tb3NfUm9zYXJpbw==" || getURL == "U29tb3NfU1RG" || getURL == "QUJDX1RWX0M0")
             number = 5;
-        else if (getURL == "RGlzY292ZXJ5SG9tZUhlYWx0aEhE" || getURL == "Q2FuYWxfVQ==" || getURL == "RnJhbmNlMjRfRmxvdw==" || getURL == "VFZfTmFjaW9uYWxfVXk=" || getURL == "UmVkZV9SZWNvcmQ=" || getURL == "U29tb3NfQmFoaWFfQmxhbmNh" || getURL == "Q2FuYWxfM19Sb3Nhcmlv" || getURL == "Q2FuYWw3X0JhaGlhX0JsYW5jYQ==" || getURL == "Q2FuYWxfMTNfU0ZF" || getURL == "Q2FuYWw5X0JhaGlhX0JsYW5jYQ==" || getURL == "TmF0R2VvSEQ=" || getURL == "VE5UX0hEX0FyZw==" || getURL == "VE5UU2VyaWVz" || getURL == "Q2FydG9vbk5ldHdvcms=" || getURL == "Tmlja2Vsb2Rlb24=" || getURL == "QWR1bHRfU3dpbQ==" || getURL == "RXZlbnRvczFIRA")
+        else if (getURL == "RGlzY292ZXJ5SG9tZUhlYWx0aEhE" || getURL == "Qmxvb21iZXJn" || getURL == "Q2FuYWxfVQ==" || getURL == "RnJhbmNlMjRfRmxvdw==" || getURL == "VFZfTmFjaW9uYWxfVXk=" || getURL == "UmVkZV9SZWNvcmQ=" || getURL == "U29tb3NfQmFoaWFfQmxhbmNh" || getURL == "Q2FuYWxfM19Sb3Nhcmlv" || getURL == "Q2FuYWw3X0JhaGlhX0JsYW5jYQ==" || getURL == "Q2FuYWxfMTNfU0ZF" || getURL == "Q2FuYWw5X0JhaGlhX0JsYW5jYQ==" || getURL == "TmF0R2VvSEQ=" || getURL == "VE5UX0hEX0FyZw==" || getURL == "VE5UU2VyaWVz" || getURL == "Q2FydG9vbk5ldHdvcms=" || getURL == "Tmlja2Vsb2Rlb24=" || getURL == "QWR1bHRfU3dpbQ==" || getURL == "RXZlbnRvczFIRA")
             number = 3;
         else if (getURL == "Q2FuYWxfNV9Sb3Nhcmlv" || getURL == "VFZfQ2FtYXJh" || getURL == "Q0hfMTJfUG9zYWRhcw==" || getURL == "Q0JBMjQ=" || getURL == "TWl4VFY=" || getURL == "TG9jYWxfQ2FybG9zX1Bheg==" || getURL == "Q2FuYWwxMF9DQkFfSEQ=" || getURL == "VU5JQ0FOQUxfQzQ=" || getURL == "TGF0YW1fUnVyYWw=" || getURL == "U29tb3NfQ29ycmllbnRlcw==" || getURL == "U29tb3NfU2FsdGE=" || getURL == "U29tb3NfUmFmYWVsYQ==" || getURL == "U29tb3NfUmVzaXN0ZW5jaWE=" || getURL == "U29tb3NfRWxfVmFsbGU=" || getURL == "Q2FuYWxfQ2l1ZGFkX01EUQ==" || getURL == "NV9EaWFzX1BZ" || getURL == "VGVsZWZlX0ludGVybmFjaW9uYWw=" || getURL == "Q0hfMTNfQ29ycmllbnRlcw==" || getURL == "U2hvd19TcG9ydHM=" || getURL == "Q0hfOV9SZXNpc3RlbmNpYQ==" || getURL == "VEVMRUZVVFVST19DNA==" || getURL == "VGVsZWZlX05ldXF1ZW4=" || getURL == "VGVsZWZlX1NhbHRh" || getURL == "U05UX0M0" || getURL == "UEFSQVZJU0lPTl9DNA==" || getURL == "Tk9USUNJQVNfUFlfQzQ=" || getURL == "Tk9USUNJQVNfUFlfQzQ=" || getURL == "UEFSQVZJU0lPTl9DNA==" || getURL == "TEFfVEVMRV9DNA==" || getURL == "U1VSX1RWX0M0" || getURL == "Q2FuYWwxMlVSVQ==" || getURL == "RGlzY292ZXJ5SG9tZUhlYWx0aEhE" || getURL == "Q2FuYWw0X1VSVQ==" || getURL == "SEJPSEQ=" || getURL == "Q2FuYWwxMF9VUlU=" || getURL == "UlBDX0M0")
             number = 4;
@@ -191,9 +200,8 @@
             unsupportedMessage.classList.add('alert-card', 'text-center', 'bg-dark', 'bg-gradient');
             unsupportedMessage.innerHTML = `
                 <i class='bx bx-error-circle boxicon'></i>
-          <h2>Dispositivo no compatible</h2>
-     <p>Esta Opción es solo para Computadoras/Notebook con Windows use una</p>
-      <p> Computadoras/Notebook para Acceder.</p>
+                <h2>Dispositivo no compatible</h2>
+                <p>Esta Opcion solo es compatible con PC con Windows. Por favor, usa un PC para acceder.</p>
             `;
             document.querySelector(".container").style.display = "none";
             document.body.appendChild(unsupportedMessage);
@@ -216,9 +224,8 @@
             unsupportedMessage.classList.add('alert-card', 'text-center', 'bg-dark', 'bg-gradient');
             unsupportedMessage.innerHTML = `
                 <i class='bx bx-error-circle boxicon'></i>
-               <h2>Dispositivo no compatible</h2>
-     <p>Esta Opción es solo para Computadoras/Notebook con Windows use una</p>
-      <p> Computadoras/Notebook para Acceder.</p>
+                <h2>Dispositivo no compatible</h2>
+                <p>Esta opción solo es compatible con PC con Windows o celulares con Android. Por favor, usá uno de estos dispositivos y seguí las instrucciones para ver el contenido.</p>
             `;
 
 
@@ -241,19 +248,18 @@
             if (isWindowsPC()) {
                 alertaDiv.innerHTML = `
                 <i class="bx bx-error-circle boxicon"></i>
-              <h2>Instalar Extensión VideoPlayer</h2>
-            <p>Para ver los canales, necesitas añadir la extensión VideoPlayer.</p>
-            <p>Una vez instalada la extensión en tu Navegador, recargar esta página.</p>
-            <p>Recuerda:estos canales estan disponibles en Argentina, Paraguay, Uruguay,</p>
-            <p>o con VPN de estos Paises.</p>
-            <p>Una vez instalada la extensión, recarga la página.</p>
+                <h2>Instalar Extensión VideoPlayer</h2>
+                <p>Para ver los canales, necesitas añadir la extensión VideoPlayer</p>
+                <p>Es un reproductor nativo para videos.</p>
+                <p>Una vez instalada la extensión en tu Navegador, recargar esta página.</p>
+                <p>Recuerda: estos canales están disponibles en Argentina, Paraguay, Uruguay o con VPN de estos países.</p>
                 <a class="btn btn-secondary rounded"
                  href="https://chromewebstore.google.com/detail/reproductor-mpdm3u8m3uepg/opmeopcambhfimffbomjgemehjkbbmji"
                  target="_blank">Instalar ahora</a>
             `;
             } else if (isAndroid()) {
                 alertaDiv.innerHTML = `
-                <i class="bx bx-error-circle boxicon"></i>
+               <i class="bx bx-error-circle boxicon"></i>
             <p>Instala el navegador <a target="_blank"
                     href="https://play.google.com/store/apps/details?id=net.quetta.browser&hl=es_PY">QUETTA BROWSER </a> o buscandolo en la PLAYSTORE en tu Celular,
                     Luego instala la extension <a target="_blank"
@@ -265,7 +271,6 @@
 
         });
 
-  
         // Array de URLs disponibles
         var mt = ["chromecast", "cdn"];
 
@@ -278,7 +283,7 @@
 
         ///Obtener datos
         function obtenerDatos() {
-            const urlOriginal = "https://cantodspaexteenop1.github.io/todscansoextensiin-op-1.html?get=VGVsZWZlSEQ=";
+            const urlOriginal = "asdasdasd";
             const proxiedURL = "https://corsproxy.io/?" + encodeURIComponent(urlOriginal);
 
             return fetch(proxiedURL)
@@ -302,13 +307,12 @@
 
 
         // Construir la URL del mpd
-        var mpdBase = `https://${mt[randomIndex]}.cvattv.com.ar/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc/${atob(getURL)}.mpd`;
-        // let mpdBase = `https://edge-live15-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzUxODkzMTg1Iiwic2lwIjoiNDUuMjI4LjY3LjMwIiwicGF0aCI6Ii9saXZlL2M2ZWRzL1RlbGVmZUhEL1NBX0xpdmVfZGFzaF9lbmMvIiwic2Vzc2lvbl9jZG5faWQiOiIzMjIwMTljOTZmMjY1ZDU1Iiwic2Vzc2lvbl9pZCI6IiIsImNsaWVudF9pZCI6IiIsImRldmljZV9pZCI6IiIsIm1heF9zZXNzaW9ucyI6MCwic2Vzc2lvbl9kdXJhdGlvbiI6MCwidXJsIjoiaHR0cHM6Ly8yMDEuMjM1LjY2LjEyMyIsImF1ZCI6IjU4Iiwic291cmNlcyI6Wzg1LDE0NCw4Niw4OF19.foAon6rbwrDXG376bRhwU5tGlQ4pnwjxZg-wC5HJpYNNQPXO6GIcve76q4mlNITIRZlpPlFhUXCrXErCReVcqA==/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc/${atob(getURL)}.mpd`;
+        var mpdBase = `https://${mt[randomIndex]}.cvattv.com.ar/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc_wl/${atob(getURL)}.mpd`;
 
         // Construir la URL del mpd por proxy por respaldo
         let getHeaderMPD = "";
 
-        if (true) {
+        if (false) {
             // (async () => {
             //     const datos = await obtenerDatos();
 
@@ -321,7 +325,11 @@
             //     getHeaderMPD = datos.headers;
             // })();
 
-            mpdBase = `https://edge-mix01-cte.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzUyNjAwNTYyIiwic2lwIjoiMzguMTY1LjIzMy43IiwicGF0aCI6Ii9saXZlL2M0ZWRzL05PVElDSUFTX1BZX0M0L1NBX0xpdmVfZGFzaF9lbmMvIiwic2Vzc2lvbl9jZG5faWQiOiI0NjZiNDg5Zjc3NmY5NGI1Iiwic2Vzc2lvbl9pZCI6IiIsImNsaWVudF9pZCI6IiIsImRldmljZV9pZCI6IiIsIm1heF9zZXNzaW9ucyI6MCwic2Vzc2lvbl9kdXJhdGlvbiI6MCwidXJsIjoiaHR0cHM6Ly8yMDEuMjM1LjY2LjExNCIsImF1ZCI6IjIwMSIsInNvdXJjZXMiOls3Nyw4NSwxNDQsODYsODhdfQ==.F1dqMOgqoiXpJTd-Sy5vfwG2LUBN05q0k5RHWewxccx3AYdsJVCOhrea0zTpahlR0I0YXcv9NOheQRH4_kG8Pg==/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc_wl/${atob(getURL)}.mpd`;
+
+
+            mpdBase = `https://edge-live34-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzUzNDcwNTk5Iiwic2lwIjoiMTc5LjI3LjIwMC40NSIsInBhdGgiOiIvbGl2ZS9jN2Vkcy9UeUNTcG9ydC9TQV9MaXZlX2Rhc2hfZW5jLyIsInNlc3Npb25fY2RuX2lkIjoiYzI4NzhmNTkxNWM3MjQ1MyIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiI3OSIsInNvdXJjZXMiOls4NSwxNDQsODYsODhdfQ==.MRSCU0mY3zKJeUjNqYYR6Dhi2uYieE0bkD-Heuf6-rRiVrekrqlKT5OpwTU7VdfOM87UIAEssP1ioWmOqMBlZw==`;
+
+            mpdBase = mpdBase + `/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc/${atob(getURL)}.mpd`;
             getHeaderMPD = "eyJvcmlnaW4iOiJodHRwczovL3BvcnRhbC5hcHAuZmxvdy5jb20uYXIvIiwicmVmZXJlciI6Imh0dHBzOi9wb3J0YWwuYXBwLmZsb3cuY29tLmFyLyJ9";
         }
 
@@ -334,6 +342,16 @@
         {
             keyId = "e884b711ab111beb8a7ba1e7bcbdc9bf";
             key = "cb89ee3961599e3e648a5aad60895f34";
+        }
+        else if (getURL == "Q2FuYWxfUFJP") //Canal_PRO
+        {
+            keyId = "8df0f1a1e05e9c6a438e23a87c9d06ea";
+            key = "5df74d374a2a8a871463e7c438fa3ba7";
+        }
+        else if (getURL == "Qmxvb21iZXJn") //Bloomberg
+        {
+            keyId = "1e50891cdc64452aae20d049727f2f3f";
+            key = "551871ba1dc6a95597ec0cb82eb3b2a4";
         }
         else if (getURL == "VFZfQ2FtYXJh") //TV_Camara Paraguay
         {
@@ -1466,5 +1484,4 @@
         }
     </script>
 </body>
-
 </html>
